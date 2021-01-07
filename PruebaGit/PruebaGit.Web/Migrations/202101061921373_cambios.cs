@@ -7,7 +7,7 @@ namespace PruebaGit.Web.Migrations
     {
         public override void Up()
         {
-            DropTable("dbo.Formularios");
+           
         }
         
         public override void Down()

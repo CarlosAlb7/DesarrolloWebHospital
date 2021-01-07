@@ -13,10 +13,10 @@
 
 
 
-    <div class="contenedor" style="font-family:'Times New Roman', Times, serif; font-size:15px;">
+    <div class="contenedor" style="font-family:Montserrat; font-size:15px;">
         <div class="card" style="background:fixed">
             <h2 class="text-center">Lista de doctores</h2>
-            <a href="@Url.Action("Agregar")"class="btn btn-facebook text-lg-center">Agregar</a>
+            <a href="@Url.Action("Agregar")"class="btn btn-primary text-lg-center">Agregar</a>
             <div class="row">
 
                 @{
@@ -29,13 +29,14 @@
                 <div class="card text-center mt-3">
                     <h5 clase="text-center">@count</h5>
              <div class="card-header text-center" style="background: rgb(63,101,212); color: white;">@p.Nombre</div>
-                     <div class="card-body text-center" style="background: rgb(63,101,212); color: white;">
+                     <div class="card-body text-center" style="background:white; color: gray;">
                      <img class="img-responsive rounded-circle" src="@p.Imagen" alt="" width="180" height="180" />
+                        
                         <p>Telefono: @p.Telefono</p>
                         <p>Especialidad: @p.Especialidad</p>
                         <p>Servicio: @p.Servicio</p>
-  @Html.ActionLink("Editar", "Edit", new { id = p.Id }, new { @class = "btn btn-outline-dark fas fa-trash text-light text-center" })
-  @Html.ActionLink("Eliminar", "Delete", new { id = p.Id }, new { @class = "btn btn-outline-danger fas fa-trash text-light text-center" })
+  @Html.ActionLink("Editar", "Edit", new { id = p.Id }, new { @class = "btn btn-outline-dark fas fa-trash text-primary text-center" })
+  @Html.ActionLink("Eliminar", "Delete", new { id = p.Id }, new { @class = "btn btn-outline-danger fas fa-trash text-primary text-center" })
 
                     </div>
                 </div>

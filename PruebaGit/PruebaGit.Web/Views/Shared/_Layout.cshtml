@@ -75,31 +75,32 @@
                         <div class="bg-white py-2 collapse-inner rounded">
 
                             <a class="collapse-item" href="@Url.Action("Agregar","Productos")">Agregar Doctor</a>
-                            <a class="collapse-item" href="@Url.Action("Index","Doctors")">Doctores2</a>
+                            <!--<a class="collapse-item" href="@Url.Action("Index","Doctors")">Doctores2</a>-->
+                            <a class="collapse-item" href="@Url.Action("Index","Productos")">Lista de Doctores</a>
                             <a class="collapse-item" href="@Url.Action("Index","Pacientes")">Pacientes</a>
 
                         </div>
-                    </div>
-                </li>
+        </div>
+    </li>
 
-                <li class="nav-item">
-                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseCitas"
-                       aria-expanded="true" aria-controls="collapseCitas">
-                        <i class="fas fa-stethoscope"></i>
-                        <span>Citas</span>
-                    </a>
-                    <div id="collapseCitas" class="collapse" aria-labelledby="headingCitas" data-parent="#accordionSidebar">
-                        <div class="bg-white py-2 collapse-inner rounded">
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseCitas"
+           aria-expanded="true" aria-controls="collapseCitas">
+            <i class="fas fa-stethoscope"></i>
+            <span>Citas</span>
+        </a>
+        <div id="collapseCitas" class="collapse" aria-labelledby="headingCitas" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
 
-                            <a class="collapse-item" href="@Url.Action("Create","Citas")">Agregar Citas</a>
-                            <a class="collapse-item" href="@Url.Action("Index","Citas")">Consultar Citas</a>
-                        </div>
-                    </div>
-                </li>
+                <a class="collapse-item" href="@Url.Action("Create","Citas")">Agregar Citas</a>
+                <a class="collapse-item" href="@Url.Action("Index","Citas")">Consultar Citas</a>
+            </div>
+        </div>
+    </li>
 
 
-                <!-- Nav Item - Utilities Collapse Menu -->
-                <li class="nav-item">
+    <!-- Nav Item - Utilities Collapse Menu -->
+<li class="nav-item">
                     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseActividades1"
                        aria-expanded="true" aria-controls="collapseActividades">
                         <i class="fas fa-clipboard-list"></i>

@@ -8,12 +8,12 @@
 <div class="container">
     <div class="row justify-content-center">
         <p>
- @Html.ActionLink("Agrega un nuevo paciente", "Create", "Paciente", new { @class = "btn btn-outline-light navbar-brand text-dark" })
+ @Html.ActionLink("Agrega un nuevo paciente", "Create", "Paciente", new { @class = "btn btn-outline-primary navbar-brand text-gray" })
         </p>
-        <div class="col-md-12 bg-info">
+        <div class="col-md-12 bg-light">
             <div class="card">
                 <div class="card-body">
-                    <table class="table table-hover bg-info ">
+                    <table class="table table-hover bg-primary ">
                         <tr class="text-white">
                             <th>
                                 @Html.DisplayNameFor(model => model.Doctor.Nombre_Doctor)
