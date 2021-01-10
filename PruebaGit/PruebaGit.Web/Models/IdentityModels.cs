@@ -56,6 +56,9 @@ namespace PruebaGit.Web.Models
         public DbSet<Citas> Citas { get; set; }
         public DbSet<ProductosEN> productosENs { get; set; }
 
+        //enviar correos
+        public DbSet<SendEmail> SendEmails { get; set; }
+
         public System.Data.Entity.DbSet<PruebaGit.Web.Models.Actividad> Actividads { get; set; }
         public System.Data.Entity.DbSet<PruebaGit.Web.Models.AgregarActividad> AgregarActividads { get; set; }
     }

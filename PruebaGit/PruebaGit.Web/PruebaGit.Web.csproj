@@ -186,6 +186,7 @@
     <Compile Include="Controllers\ProfileController.cs" />
     <Compile Include="Controllers\Registrar_HospitalsController.cs" />
     <Compile Include="Controllers\RolesDelHospitalController.cs" />
+    <Compile Include="Controllers\SendMailerController.cs" />
     <Compile Include="Controllers\TrabajadorsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -234,9 +235,9 @@
     <Compile Include="Migrations\202101040909239_Migracion.Designer.cs">
       <DependentUpon>202101040909239_Migracion.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202101061921373_cambios.cs" />
-    <Compile Include="Migrations\202101061921373_cambios.Designer.cs">
-      <DependentUpon>202101061921373_cambios.cs</DependentUpon>
+    <Compile Include="Migrations\202101082227391_email.cs" />
+    <Compile Include="Migrations\202101082227391_email.Designer.cs">
+      <DependentUpon>202101082227391_email.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -248,6 +249,7 @@
     <Compile Include="Models\Doctor.cs" />
     <Compile Include="Models\Hospital.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\MailModel.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Citas1.cs" />
     <Compile Include="Models\ProductosBL.cs" />
@@ -255,6 +257,7 @@
     <Compile Include="Models\ProductosEN.cs" />
     <Compile Include="Models\ProfileViewModel.cs" />
     <Compile Include="Models\Registrar_Hospital.cs" />
+    <Compile Include="Models\SendEmail.cs" />
     <Compile Include="Models\Trabajador.cs" />
     <Compile Include="Models\UserViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -486,6 +489,7 @@
     <Content Include="Views\Productos\Edit.cshtml" />
     <Content Include="Views\Productos\Agregar.cshtml" />
     <Content Include="Views\Productos\Index.cshtml" />
+    <Content Include="Views\SendMailer\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -536,8 +540,8 @@
     <EmbeddedResource Include="Migrations\202101040909239_Migracion.resx">
       <DependentUpon>202101040909239_Migracion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202101061921373_cambios.resx">
-      <DependentUpon>202101061921373_cambios.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202101082227391_email.resx">
+      <DependentUpon>202101082227391_email.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
