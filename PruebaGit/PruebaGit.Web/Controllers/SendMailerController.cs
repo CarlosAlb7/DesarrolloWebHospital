@@ -3,6 +3,7 @@ using System.Net.Mail;
 using PruebaGit.Web.Models;
 using System.Net;
 using System;
+using System.Web;
 
 namespace PruebaGit.Web.Controllers
 {
@@ -16,10 +17,9 @@ namespace PruebaGit.Web.Controllers
             return View();
         }
         [HttpPost]
-        public void Index( string To, string Subject, string Body)
+        public void Index( string To, string Subject, string Body, HttpPostedFileBase fichero)
         {
-            try
-            {
+       
                 SmtpClient client = new SmtpClient("smtp.gmail.com");
                 client.EnableSsl = true;
                 client.Port = 587;
@@ -27,19 +27,22 @@ namespace PruebaGit.Web.Controllers
                 //If you need to authenticate
                 client.Credentials = new NetworkCredential("danielv210796@gmail.com", "21julio1996AA");
                 MailMessage mailMessage = new MailMessage();
-                mailMessage.From = new MailAddress("danielv210796@gmail.com", "HospitalExpress");
+
+                mailMessage.From = new MailAddress("danielv210796@gmail.com","Hospital Express");
                 mailMessage.To.Add(To);
                 mailMessage.Subject = Subject;
                 mailMessage.Body = Body;
 
+            string ruta = Server.MapPath("~/Upload/");
+            fichero.SaveAs(ruta + "\\" + fichero.FileName);
+
+            Attachment adjunto = new Attachment(ruta + "\\" + fichero.FileName);
+            mailMessage.Attachments.Add(adjunto);
+
                 client.Send(mailMessage);
                 ViewBag.Message = ("Mensaje enviado exitosamente");
 
-            }
-            catch(Exception)
-            {
-                ViewBag.Error("No se envio el mensaje");
-            }
+          
         }
     }
 }
