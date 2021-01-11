@@ -2,142 +2,79 @@
 
 
 @{
-    ViewBag.Title = "Delete";
+    ViewBag.Title = "Eliminar";
 }
     
+<div class="container text-light" style="font-style:oblique">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card text-center" style="background-color:aliceblue; color:blue;">          
+                        <h3> Estas seguro que quieres eliminar esto?</h3>
+                            <hr />
+                            <dl class="dl-horizontal">
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.Actividad.Id)
+                                </dt>
 
-<h2 class="text-danger">Eliminar</h2>
+                                <dd>
+                                    @Html.DisplayFor(model => model.Actividad.Id)
+                                </dd>
 
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.ID_Paciente)
+                                </dt>
 
-<h3>Estas seguro de que quieres eliminar ?</h3>
-<div>
+                                <dd>
+                                    @Html.DisplayFor(model => model.ID_Paciente)
+                                </dd>
 
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Actividad.Id)
-        </dt>
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.ID_Empleado)
+                                </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Actividad.Id)
-        </dd>
+                                <dd>
+                                    @Html.DisplayFor(model => model.ID_Empleado)
+                                </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.ID_Paciente)
-        </dt>
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.Fecha)
+                                </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.ID_Paciente)
-        </dd>
+                                <dd>
+                                    @Html.DisplayFor(model => model.Fecha)
+                                </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.ID_Empleado)
-        </dt>
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.Hora)
+                                </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.ID_Empleado)
-        </dd>
+                                <dd>
+                                    @Html.DisplayFor(model => model.Hora)
+                                </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Fecha)
-        </dt>
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.Actividad_Realizar)
+                                </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Fecha)
-        </dd>
+                                <dd>
+                                    @Html.DisplayFor(model => model.Actividad_Realizar)
+                                </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Hora)
-        </dt>
+                            </dl>
 
-        <dd>
-            @Html.DisplayFor(model => model.Hora)
-        </dd>
+                            @using (Html.BeginForm())
+                            {
+                                @Html.AntiForgeryToken()
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Actividad_Realizar)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Actividad_Realizar)
-        </dd>
-
-    </dl>
-
-    @using (Html.BeginForm())
-    {
-        @Html.AntiForgeryToken()
-
-        <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-outline-danger" /> |
-            @Html.ActionLink("Back to List", "Index")
-        </div>
-    }
-</div>
-=======
-<h3> Estas seguro que quieres borrar</h3>
-    <div>
-        <h4>AgregarActividad</h4>
-        <hr />
-        <dl class="dl-horizontal">
-            <dt>
-                @Html.DisplayNameFor(model => model.Actividad.Id)
-            </dt>
-
-            <dd>
-                @Html.DisplayFor(model => model.Actividad.Id)
-            </dd>
-
-            <dt>
-                @Html.DisplayNameFor(model => model.ID_Paciente)
-            </dt>
-
-            <dd>
-                @Html.DisplayFor(model => model.ID_Paciente)
-            </dd>
-
-            <dt>
-                @Html.DisplayNameFor(model => model.ID_Empleado)
-            </dt>
-
-            <dd>
-                @Html.DisplayFor(model => model.ID_Empleado)
-            </dd>
-
-            <dt>
-                @Html.DisplayNameFor(model => model.Fecha)
-            </dt>
-
-            <dd>
-                @Html.DisplayFor(model => model.Fecha)
-            </dd>
-
-            <dt>
-                @Html.DisplayNameFor(model => model.Hora)
-            </dt>
-
-            <dd>
-                @Html.DisplayFor(model => model.Hora)
-            </dd>
-
-            <dt>
-                @Html.DisplayNameFor(model => model.Actividad_Realizar)
-            </dt>
-
-            <dd>
-                @Html.DisplayFor(model => model.Actividad_Realizar)
-            </dd>
-
-        </dl>
-
-        @using (Html.BeginForm())
-        {
-            @Html.AntiForgeryToken()
-
-            <div class="form-actions no-color">
-                <input type="submit" value="Delete" class="btn btn-default" /> |
-                @Html.ActionLink("Back to List", "Index")
+                                <div class="form-actions text-center">
+                                    <input type="submit" value="Eliminar" class="btn btn-danger" /> |
+                                    <a href="@Url.Action("Index", "AgregarActividads1")" class="btn btn-primary">Regresar</a>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
             </div>
-        }
-    </div>
+        
+   
 

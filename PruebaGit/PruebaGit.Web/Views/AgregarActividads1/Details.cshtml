@@ -4,63 +4,74 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
 
-<div>
-    <h4>AgregarActividad</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Actividad.Id)
-        </dt>
+<div class="container text-light" style="font-style:oblique;font-family:'Californian FB';">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card" style="background-color:aliceblue; color:blue;">
+                <div class="card-body text-center ">
+                    <h1>Actividad</h1>
+                    <hr />
+                    <dl class="dl-horizontal">
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Actividad.Id)
+                        </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Actividad.Id)
-        </dd>
+                        <dd>
+                            @Html.DisplayFor(model => model.Actividad.Id)
+                        </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.ID_Paciente)
-        </dt>
+                        <dt>
+                            @Html.DisplayNameFor(model => model.ID_Paciente)
+                        </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.ID_Paciente)
-        </dd>
+                        <dd>
+                            @Html.DisplayFor(model => model.ID_Paciente)
+                        </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.ID_Empleado)
-        </dt>
+                        <dt>
+                            @Html.DisplayNameFor(model => model.ID_Empleado)
+                        </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.ID_Empleado)
-        </dd>
+                        <dd>
+                            @Html.DisplayFor(model => model.ID_Empleado)
+                        </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Fecha)
-        </dt>
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Fecha)
+                        </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Fecha)
-        </dd>
+                        <dd>
+                            @Html.DisplayFor(model => model.Fecha)
+                        </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Hora)
-        </dt>
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Hora)
+                        </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Hora)
-        </dd>
+                        <dd>
+                            @Html.DisplayFor(model => model.Hora)
+                        </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Actividad_Realizar)
-        </dt>
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Actividad_Realizar)
+                        </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Actividad_Realizar)
-        </dd>
+                        <dd>
+                            @Html.DisplayFor(model => model.Actividad_Realizar)
+                        </dd>
 
-    </dl>
-</div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+                    </dl>
+                </div>
+                <p class="text-center">
+
+                    <a href="@Url.Action("Edit","AgregarActividads1",new { id = Model.Id })" class="btn btn-primary">Editar</a>
+                    <a href="@Url.Action("Index","AgregarActividads1")" class="btn btn-primary">Regresar</a>
+              
+          
+                </p>
+            </div>
+            </div>
+        </div>
+    </div>
+

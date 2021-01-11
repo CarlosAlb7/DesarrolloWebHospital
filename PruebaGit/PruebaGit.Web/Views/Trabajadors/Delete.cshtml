@@ -4,39 +4,33 @@
     ViewBag.Title = "Delete";
 }
 
-<div class="container">
+<div class="container text-light" style="font-style:oblique">
     <div class="row justify-content-center">
         <div class="col-md-6">
-            <div class="card bg-info">
-                <div class="card-header">
-                    <h3 class="card-title text-light">Estas seguro que quieres eliminar este egistro?</h3>
-                    <div>
-                        <hr />
-                        <dl class="dl-horizontal">
-                            <dt>
-                                @Html.DisplayNameFor(model => model.Nombre)
-                            </dt>
+            <div class="card text-center" style="background-color:aliceblue; color:blue;">
+                <h3> Estas seguro que quieres eliminar esto?</h3>
+                <hr />
+                <dl class="dl-horizontal">
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Nombre)
+                    </dt>
 
-                            <dd>
-                                @Html.DisplayFor(model => model.Nombre)
-                            </dd>
+                    <dd>
+                        @Html.DisplayFor(model => model.Nombre)
+                    </dd>
 
-                        </dl>
+                </dl>
 
-                        @using (Html.BeginForm())
-                        {
-                            @Html.AntiForgeryToken()
+                @using (Html.BeginForm())
+                {
+                    @Html.AntiForgeryToken()
 
-                            <div class="form-actions">
-                                <input type="submit" value="Eliminar" class="btn btn-danger" />
-
-                                <div class="btn btn-outline-light float-lg-right">
-                                    @Html.ActionLink("Regresar al Index ", "Index")
-                                </div>
-                            </div>
-                        }
+                    <div class="form-actions">
+                        <input type="submit" value="Eliminar" class="btn btn-danger" />
+                        <a href="@Url.Action("Index","Trabajadors")" class="btn btn-primary">Regresar</a>
+                     
                     </div>
-                </div>
+                }
             </div>
         </div>
     </div>
