@@ -13,7 +13,7 @@ namespace PruebaGit.Web.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "202101112059439_SendEmail"; }
+            get { return "202101120051028_SendEmail"; }
         }
         
         string IMigrationMetadata.Source

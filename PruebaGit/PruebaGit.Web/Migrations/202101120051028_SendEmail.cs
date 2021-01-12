@@ -7,10 +7,12 @@ namespace PruebaGit.Web.Migrations
     {
         public override void Up()
         {
+            AddColumn("dbo.SendEmails", "verificar", c => c.String());
         }
         
         public override void Down()
         {
+            DropColumn("dbo.SendEmails", "verificar");
         }
     }
 }

@@ -17,7 +17,7 @@ namespace PruebaGit.Web.Controllers
             return View();
         }
         [HttpPost]
-        public void Index( string To, string Subject, string Body, HttpPostedFileBase fichero)
+        public void Index( string To, string Subject, string Body, HttpPostedFileBase fichero, string verificar)
         {
        
                 SmtpClient client = new SmtpClient("smtp.gmail.com");
@@ -33,12 +33,15 @@ namespace PruebaGit.Web.Controllers
                 mailMessage.Subject = Subject;
                 mailMessage.Body = Body;
 
-            string ruta = Server.MapPath("~/Upload/");
-            fichero.SaveAs(ruta + "\\" + fichero.FileName);
+            if(verificar == "verificado")
+            {
+                string ruta = Server.MapPath("~/Upload/");
+                fichero.SaveAs(ruta + "\\" + fichero.FileName);
 
-            Attachment adjunto = new Attachment(ruta + "\\" + fichero.FileName);
-            mailMessage.Attachments.Add(adjunto);
-
+                Attachment adjunto = new Attachment(ruta + "\\" + fichero.FileName);
+                mailMessage.Attachments.Add(adjunto);
+            }
+        
                 client.Send(mailMessage);
                 ViewBag.Message = ("Mensaje enviado exitosamente");
 

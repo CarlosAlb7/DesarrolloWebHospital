@@ -239,9 +239,9 @@
     <Compile Include="Migrations\202101101905586_fichero.Designer.cs">
       <DependentUpon>202101101905586_fichero.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202101112059439_SendEmail.cs" />
-    <Compile Include="Migrations\202101112059439_SendEmail.Designer.cs">
-      <DependentUpon>202101112059439_SendEmail.cs</DependentUpon>
+    <Compile Include="Migrations\202101120051028_SendEmail.cs" />
+    <Compile Include="Migrations\202101120051028_SendEmail.Designer.cs">
+      <DependentUpon>202101120051028_SendEmail.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -547,8 +547,8 @@
     <EmbeddedResource Include="Migrations\202101101905586_fichero.resx">
       <DependentUpon>202101101905586_fichero.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202101112059439_SendEmail.resx">
-      <DependentUpon>202101112059439_SendEmail.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202101120051028_SendEmail.resx">
+      <DependentUpon>202101120051028_SendEmail.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

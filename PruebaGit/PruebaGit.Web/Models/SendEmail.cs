@@ -13,6 +13,8 @@ namespace PruebaGit.Web.Models
         public string Subject { get; set; }
         public string Body { get; set; }  
         public string fichero { get; set; }
+        public string verificar { get; set; }
+
 
     }
 
