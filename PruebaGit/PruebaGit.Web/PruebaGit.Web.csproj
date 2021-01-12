@@ -485,15 +485,15 @@
     <Content Include="Views\Home\Bienvenido.cshtml" />
     <Content Include="Views\Home\Servicios.cshtml" />
     <Content Include="Views\Citas\Create.cshtml" />
-    <Content Include="Views\Citas\Delete.cshtml" />
-    <Content Include="Views\Citas\Details.cshtml" />
-    <Content Include="Views\Citas\Edit.cshtml" />
     <Content Include="Views\Citas\Index.cshtml" />
     <Content Include="Views\Productos\Delete.cshtml" />
     <Content Include="Views\Productos\Edit.cshtml" />
     <Content Include="Views\Productos\Agregar.cshtml" />
     <Content Include="Views\Productos\Index.cshtml" />
     <Content Include="Views\SendMailer\Index.cshtml" />
+    <Content Include="Views\Citas\Details.cshtml" />
+    <Content Include="Views\Citas\Edit.cshtml" />
+    <Content Include="Views\Citas\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
