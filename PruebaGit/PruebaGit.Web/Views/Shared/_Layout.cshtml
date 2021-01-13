@@ -25,7 +25,7 @@
                 <img style="width: 100px; height: 100px; margin-left:60px; margin-top: 20px;" src="~/Content/img/logazorecortado.png" />
 
                 <h4 style="margin-left: 30px; color: white; margin-bottom: 20px;">Hopital Express</h4>
-
+                
 
             <li class="nav-item">
 
@@ -80,29 +80,58 @@
                             <a class="collapse-item" href="@Url.Action("Index","Pacientes")">Pacientes</a>
 
                         </div>
-                    </div>
-                </li>
+        </div>
+    </li>
 
-                <li class="nav-item">
-                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseCitas"
-                       aria-expanded="true" aria-controls="collapseCitas">
-                        <i class="fas fa-stethoscope"></i>
-                        <span>Citas</span>
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseCitas"
+           aria-expanded="true" aria-controls="collapseCitas">
+            <i class="fas fa-stethoscope"></i>
+            <span>Citas</span>
+        </a>
+        <div id="collapseCitas" class="collapse" aria-labelledby="headingCitas" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+
+               
+                <a class="collapse-item" href="@Url.Action("Index","Citas")">Consultar Citas</a>
+            </div>
+        </div>
+    </li>
+
+
+    <!-- Nav Item - Utilities Collapse Menu -->
+<li class="nav-item">
+                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseActividades1"
+                       aria-expanded="true" aria-controls="collapseActividades">
+                        <i class="fas fa-clipboard-list"></i>
+                        <span>Actividades1</span>
                     </a>
-                    <div id="collapseCitas" class="collapse" aria-labelledby="headingCitas" data-parent="#accordionSidebar">
+                    <div id="collapseActividades1" class="collapse" aria-labelledby="headingActividades1" data-parent="#accordionSidebar">
                         <div class="bg-white py-2 collapse-inner rounded">
 
-                            <a class="collapse-item" href="@Url.Action("Create","Citas")">Agregar Citas</a>
-                            <a class="collapse-item" href="@Url.Action("Index","Citas")">Consultar Citas</a>
+                            <a class="collapse-item" href="@Url.Action("Index","AgregarActividads1")">Registrar Actividad</a>
+                            <a class="collapse-item" href="@Url.Action("Index","Actividads1")">Actividades</a>
                         </div>
                     </div>
                 </li>
-
-
-
                 <!-- Divider -->
 
+                <!-- Nav Item - Utilities Collapse Menu -->
+                <li class="nav-item">
+                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseHospitales"
+                       aria-expanded="true" aria-controls="collapseHospitales">
+                        <i class="fas fa-hospital-alt"></i>
+                        <span>Hospitales</span>
+                    </a>
+                    <div id="collapseHospitales" class="collapse" aria-labelledby="headingHospitales"
+                         data-parent="#accordionSidebar">
+                        <div class="bg-white py-2 collapse-inner rounded">
 
+                            <a class="collapse-item" href="@Url.Action("Index","Registrar_Hospitals")">Hospitales</a>
+                            <a class="collapse-item" href="@Url.Action("Index","Hospitals")">Asignar numero de hospital</a>
+                        </div>
+                    </div>
+                </li>
 
                 <li class="nav-item">
                     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseRoles"
@@ -144,40 +173,56 @@
 
 
                 <!-- Nav Item - Utilities Collapse Menu -->
+                <!-- Nav Item - Utilities Collapse Menu -->
+                <li class="nav-item">
+                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseActividades"
+                       aria-expanded="true" aria-controls="collapseActividades">
+                        <i class="fas fa-clipboard-list"></i>
+                        <span>Actividades</span>
+                    </a>
+                    <div id="collapseActividades" class="collapse" aria-labelledby="headingActividades" data-parent="#accordionSidebar">
+                        <div class="bg-white py-2 collapse-inner rounded">
 
+                            <a class="collapse-item" href="@Url.Action("Index","AgregarActividads1")">Registrar Actividad</a>
+                            <a class="collapse-item" href="@Url.Action("Index","Actividads1")">Actividades</a>
+                        </div>
+                    </div>
+                </li>
+                <!-- Divider -->
+                <!-- Nav Item - Utilities Collapse Menu -->
+                <li class="nav-item">
+                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseHospitales2"
+                       aria-expanded="true" aria-controls="collapseHospitales2">
+                        <i class="fas fa-hospital-alt"></i>
+                        <span>Hospitales</span>
+                    </a>
+                    <div id="collapseHospitales2" class="collapse" aria-labelledby="headingHospitales2"
+                         data-parent="#accordionSidebar">
+                        <div class="bg-white py-2 collapse-inner rounded">
 
+                            <a class="collapse-item" href="@Url.Action("Index","Registrar_Hospitals")">Hospitales</a>
+                            <a class="collapse-item" href="@Url.Action("Index","Hospitals")">Asignar numero de Hospital</a>
+                        </div>
+                    </div>
+                </li>
             }
             @if (User.IsInRole("Pacientes"))
             {
+
                 <li class="nav-item">
-                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseCitas"
-                       aria-expanded="true" aria-controls="collapseCitas">
-                        <i class="fas fa-stethoscope"></i>
-                        <span>Citas</span>
+                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseHospitales1"
+                       aria-expanded="true" aria-controls="collapseHospitales1">
+                        <i class="fas fa-hospital-alt"></i>
+                        <span>Hospitales</span>
                     </a>
-                    <div id="collapseCitas" class="collapse" aria-labelledby="headingCitas" data-parent="#accordionSidebar">
-                        <div class="bg-white py-2 collapse-inner rounded">
+                    <div id="collapseHospitales1" class="collapse" aria-labelledby="headingHospitales1"
+                         data-parent="#accordionSidebar">
+                        <div class="bg-white py-1 collapse-inner rounded">
 
-
-                            <a class="collapse-item" href="@Url.Action("Index","Citas")">Consultar Citas</a>
+                            <a class="collapse-item" href="@Url.Action("Index","Registrar_Hospitals")">Hospitales</a>
                         </div>
                     </div>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseServicios"
-                       aria-expanded="true" aria-controls="collapseServicios">
-                        <i class="fas fa-stethoscope"></i>
-                        <span>Servicios</span>
-                    </a>
-                    <div id="collapseServicios" class="collapse" aria-labelledby="headingServicios" data-parent="#accordionSidebar">
-                        <div class="bg-white py-2 collapse-inner rounded">
-
-
-                            <a class="collapse-item" href="@Url.Action("Servicios","Home")">Servicios</a>
-                        </div>
-                    </div>
-                </li>
-
             }
 
 

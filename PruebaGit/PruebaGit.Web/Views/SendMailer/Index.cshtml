@@ -1,6 +1,8 @@
 ﻿@model  PruebaGit.Web.Models.SendEmail
 
-
+@{
+    ViewBag.Title = "Index";
+}
 <!DOCTYPE html>
 
 <html>
@@ -15,21 +17,23 @@
                 <div class="card">
                     <h2 class="card-header text-center mt-1 p-2 bg-primary text-light">Agregar Doctores</h2>
                     @*Se relaciona con el metodo de agregar del controlador*@
-                    <form action="@Url.Action("Index")" class="text-center p-1" enctype="multipart/form-data" method="post">
-                        @Html.AntiForgeryToken()
-                        @*Agregamos los botones para llenar los campos*@
-                        <input type="email" name="To" placeholder="Para:" class="form-control col-md-12" />
-                        <br />
-                        <input type="text" name="Subject" placeholder="Titulo:" class="form-control col-md-12" />
-                        <br />
-                        <input type="text" name="Body" placeholder="Escribe un mensaje:" class="form-control col-md-12" />
-                        <br />
-
-                    </form>
-                    <input type="submit" value="Enviar" class="btn btn-facebook" />
+                <form action="@Url.Action("Index")" class="text-center p-1" enctype="multipart/form-data" method="post">
+                    @Html.AntiForgeryToken()
+                    @*Agregamos los botones para llenar los campos*@
+                    <input type="email" name="To" placeholder="Para:" class="form-control col-md-12" />
+                    <br />
+                    <input type="text" name="Subject" placeholder="Titulo:" class="form-control col-md-12" />
+                    <br />
+                    <input type="text" name="Body" placeholder="Escribe un mensaje:" class="form-control col-md-12" />
+                    <br />
+                    <input type="file" name="fichero"/>
+                    <br />
+                    <input type="submit" value="Enviar Correo" class="btn btn-facebook" />
+                </form>
+                    
                 </div>
             </div>
         </div>
     </div>
-    </body>
+</body>
 </html>

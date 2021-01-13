@@ -4,11 +4,12 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
-
-<p>
-    @Html.ActionLink("Create New", "Create")
+@*Se agrega el modal*@
+<p class="mt-3 text-center">
+    <a data-toggle="modal" data-target="#AddModal" class="nav navbar-brand text-light btn btn-primary pl-3 pr-3" href="#">Agregar cita</a>
 </p>
+
+
 <table class="table">
     <tr>
         <th>
@@ -35,43 +36,95 @@
         <th>
             @Html.DisplayNameFor(model => model.DoctorId)
         </th>
-      
+
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.No_Cita)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CURP)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Correo)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Dia)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Mes)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Año)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Hora)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.DoctorId)
-        </td>
-        
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.No_Cita)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CURP)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Correo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dia)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Mes)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Año)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Hora)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DoctorId)
+            </td>
+
+            <td class="text-white">
+                @Html.ActionLink("Editar", "Edit", new { id = item.Id }, new { @class = "btn btn-warning fas fa-edit text-light" })
+                @Html.ActionLink("Ver", "Details", new { id = item.Id }, new { @class = "btn btn-success fas fa-eye" })
+                @Html.ActionLink("Eliminar", "Delete", new { id = item.Id }, new { @class = "btn btn-danger fas fa-ban" })
+            </td>
+        </tr>
+    }
 
 </table>
+
+@*MODAL*@
+<div class="modal fade text-primary" id="AddModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        @*COLOR DE FONDO DE EN MEDIO*@
+        <div class="modal-content">
+            @*COLOR DE FONDO DE LA PARTE DE ARRIBA*@
+            <div class="modal-header bg-light">
+                <h2 class="modal-title  text-center " id="exampleModalLabel">Agregar Trabajador</h2>
+                <button type="button" class="close btn-danger" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <form action="@Url.Action("Create","Citas" )" method="post">
+                @Html.AntiForgeryToken()
+                <div class="modal-body">
+                    <div class="form-group">
+
+                        <div class="col-md-10">
+                            <label class="col-md-6 col-form-label">  Cita   </label>
+                            <label class="col-md-6 col-form-label"> No. Cita  </label>
+                            <input type="text" value="" name="No_Cita" class="form-control" />
+                            <label class="col-md-6 col-form-label">  CURP   </label>
+                            <input type="text" value="" name="CURP" class="form-control" />
+                            <label class="col-md-6 col-form-label"> CORREO  </label>
+                            <input type="text" value="" name="Correo" class="form-control" />
+                            <label class="col-md-6 col-form-label">  DIA   </label>
+                            <input type="text" value="" name="Dia" class="form-control" />
+                            <label class="col-md-6 col-form-label">  MES  </label>
+                            <input type="text" value="" name="Mes" class="form-control" />
+                            <label class="col-md-6 col-form-label">AÑO   </label>
+                            <input type="text" value="" name="Año" class="form-control" />
+
+                            <label class="col-md-6 col-form-label">  HORA  </label>
+                            <input type="text" value="" name="Hora" class="form-control" />
+                            <label class="col-md-6 col-form-label">  DOCTOR ID   </label>
+                            <input type="text" value="" name="DoctorId" class="form-control" />
+                        </div>
+                    </div>
+                </div>
+                @*COLOR DE FONDO DE LA PARTE DE ABAJO*@
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
+                    <button type="submit" class="btn btn-danger">Guardar cambios</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+

@@ -8,12 +8,12 @@
 <div class="container text-light" style="font-style:oblique; margin-top:100px; font-family:'Californian FB';">
     <div class="row justify-content-center">
         <div class="col-md-6">
-            <div class="card bg-primary">
-                <div class="card-header bg-primary">
-                    <h3 class="card-title text-light">Estas seguro que quieres eliminar este registro?</h3>
+            <div class="card text-center" style="background-color:aliceblue; color:blue;">
+             
+                    <h3 class="card-title">Estas seguro que quieres eliminar este registro?</h3>
                     <div>
                         <hr />
-                        <dl class="dl-horizontal text-light">
+                        <dl class="dl-horizontal">
                             <dt>
                                 @Html.DisplayNameFor(model => model.Trabajador.Nombre)
                             </dt>
@@ -62,7 +62,7 @@
 
                     <div class="form-actions text-center">
                         <input type="submit" value="Eliminar" class="btn btn-danger" /> |
-                        <a href="@Url.Action("Index", "Administradors")" class="btn btn-light">Regresar</a>
+                        <a href="@Url.Action("Index", "Administradors")" class="btn btn-primary">Regresar</a>
                     </div>
                         }
                     </div>
@@ -70,4 +70,4 @@
                 </div>
             </div>
         </div>
-    </div>
+
