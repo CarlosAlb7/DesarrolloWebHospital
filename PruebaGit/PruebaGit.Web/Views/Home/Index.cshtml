@@ -2,30 +2,43 @@
     ViewBag.Title = "Inicio";
     Layout = null;
 }
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pagina Principal</title>
-    <link rel="stylesheet" href="~/Content/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/Content/sb-admin-2.min.css" />
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
 </head>
-<body class=" bg-login-image" style=" background-image: url('https://cdn.pixabay.com/photo/2020/09/22/03/23/doctor-5591782_1280.jpg')">
-
-
-    <div style="margin-left: 870px; margin-top: 80px;">
-        <img style="width: 200px; height: 200px; margin-left:125px; margin-top: 20px;" src="~/Content/img/logazorecortadoazuuul.png" />
-        <h1 style="color:#0275d8; font-size: 45px; font-family: Montserrat; margin-top:10px;">HOSPITAL EXPRESS</h1>
-        <div class="row">
-            <div class="">
+<body class=" bg-login-image" style="padding:0%; margin:0%;  background-image: url(https://images.unsplash.com/photo-1551076805-e1869033e561?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1490&q=80);">
+    <div style="position:absolute; top:0; left:0; width:100%; height:100%; background-color: rgba(41, 43, 44, 0.2);">
+        <img style="width: 150px; height: 150px; margin-left:380px; margin-top: 225px; position:absolute;" src="~/Content/img/logazorecortadoazuuul.png" />
+        <div style="margin-left: 540px; margin-top: 263px;">
+            <h1 style="        color: #0275d8;
+        font-size: 65px;
+        font-family: Montserrat;
+        margin-top: 10px;">
+                HOSPITAL EXPRESS
+            </h1>
+            <div class="row">
                 <div class="">
-                    <p class="text-center" style="margin-left: 160px; margin-top: 10px;">
-                        <button class="btn btn-light" style="width: 150px; height: 50px; font-size: 25px;"> @Html.ActionLink("Entrar", "Login", "Account")</button>
-                    </p>
+                    <div class="">
+                        <p class="text-center" style="margin-left: 170px; margin-top: 10px; ">
+                            <button class="btn btn-light" style="width: 180px; height: 60px; font-size: 30px;"> @Html.ActionLink("Entrar", "Login", "Account")</button>
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>
