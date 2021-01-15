@@ -15,6 +15,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
 </head>
 <body>
+    
     <!-- Page Wrapper -->
     <div id="wrapper">
         <!-- Sidebar -->
@@ -288,7 +289,7 @@
 
                     <a href="https://twitter.com/?lang=es"> <img style="width: 24px; height: 24px; margin-left:20px; margin-top: 20px;" src="~/Content/img/gorjeo.png" /></a>
 
-                    
+
                     <img style="width: 24px; height: 24px; margin-left:485px; margin-top: 20px;" src="~/Content/img/home-address.png" />
                     <p style=" margin-left:980px; margin-top: 35px; position: absolute;">Tijuana, Baja Califormia.</p>
 
@@ -303,7 +304,7 @@
             </div>
             <!-- End of Page Wrapper -->
             <!-- Scroll to Top Button-->
-            <a class="scroll-to-top rounded" href="#page-top">
+            <a id="parriba" class="scroll-to-top rounded" href="#page-top">
                 <i class="fas fa-angle-up"></i>
             </a>
             <!-- Bootstrap core JavaScript-->
@@ -322,7 +323,7 @@
 
 
 
-
+            <script src="~/Scripts/elevator.js"></script>
             <!-- Page level custom scripts -->
             <script src="~/Scripts/chart-area-demo.js"></script>
             <script src="~/Scripts/chart-pie-demo.js"></script>
@@ -331,15 +332,26 @@
                 @RenderBody()
 
                 <!-- Footer -->
-                
                 <!-- End of Footer -->
             </div>
 
             @Scripts.Render("~/bundles/jquery")
             @Scripts.Render("~/bundles/bootstrap")
+            
             @RenderSection("scripts", required: false)
+
+            
         </div>
     </div>
+   
+    <script>
+
+        window.onload = function parriba() {
+            var elevador = new Elevator({
+                element: document.querySelector("#parriba")
+            });
+        };
+    </script>
 
 </body>
 </html>
