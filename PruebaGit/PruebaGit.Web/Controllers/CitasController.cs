@@ -7,6 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using PruebaGit.Web.Models;
+using Rotativa;
 
 namespace PruebaGit.Web.Controllers
 {
@@ -20,6 +21,12 @@ namespace PruebaGit.Web.Controllers
             var cita = db.Citas.Include(c => c.Doctor);
             return View(cita.ToList());
         }
+        public ActionResult Index2()
+        {
+            var cita = db.Citas.Include(c => c.Doctor);
+            return View(cita.ToList());
+        }
+
 
         // GET: Citas/Details/5
         public ActionResult Details(int? id)
@@ -127,6 +134,11 @@ namespace PruebaGit.Web.Controllers
                 db.Dispose();
             }
             base.Dispose(disposing);
+        }
+        public ActionResult PDF()
+        {
+            return new ActionAsPdf("Index2")
+            { FileName = "Test.pdf" };
         }
     }
 }

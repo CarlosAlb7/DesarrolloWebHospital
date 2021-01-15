@@ -1,7 +1,8 @@
 ﻿@model IEnumerable<PruebaGit.Web.Models.Citas>
 
 @{
-    ViewBag.Title = "Index";
+   
+
 }
 
 @*Se agrega el modal*@
@@ -77,7 +78,7 @@
     }
 
 </table>
-
+@Html.ActionLink("Imprimir", "PDF", "Citas", new { @class = "btn btn-success fas fa-eye" })
 @*MODAL*@
 <div class="modal fade text-primary" id="AddModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -114,7 +115,7 @@
                             <label class="col-md-6 col-form-label">  HORA  </label>
                             <input type="text" value="" name="Hora" class="form-control" />
                             <label class="col-md-6 col-form-label">  DOCTOR ID   </label>
-                            <input type="text" value="" name="DoctorId" class="form-control" />
+                            <input type="text" value="1" name="DoctorId" class="form-control" />
                         </div>
                     </div>
                 </div>
