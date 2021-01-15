@@ -12,12 +12,12 @@ namespace PruebaGit.Web.Models
         public int Id { get; set; }
         [Display(Name = "No. Cita")]
         public int No_Cita { get; set; }
-
         [Display(Name = "CURP")]
         public string CURP { get; set; }
         [Display(Name = "Correo electronico")]
         public string Correo { get; set; }
         [Display(Name = "Dia")]
+
         public string Dia { get; set; }
         [Display(Name = "Mes")]
         public string Mes { get; set; }
